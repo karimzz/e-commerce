@@ -1,0 +1,361 @@
+
+/* start Landing  */
+
+.landing{
+    background: var(--background-color);
+    overflow: hidden;
+}
+
+.landing .container{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 600px)
+{
+    .landing .container{
+        padding: 30px 0 ;
+    }
+}
+
+.landing .text{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-top: 80px;
+    
+    
+}
+
+.landing .text h2{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.landing .text p{
+    color: var(--small-text-color);
+    margin-top: 25px;
+    line-height:2;
+    font-size: 15px;
+    width: 450px;
+    max-width: 100%;
+}
+
+@media(max-width:600px)
+{
+    .landing .text p{
+        width: 300px;
+    }
+}
+
+.landing .image img{
+    width: 770px;
+}
+
+.landing .btn-group{
+    margin-top: 27px;
+}
+
+.landing .btn-group button:nth-child(1){
+    background-color: var(--second-color);
+    border: none;
+    padding: 15px 33px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius:24px ;
+    transition: .3s;
+}
+
+.landing .btn-group button:nth-child(1):hover{
+    background-color: #e9af1e;
+}
+
+.landing .btn-group button:nth-child(2){
+    padding: 15px 33px;
+    border-radius:24px ;
+    background-color: transparent;
+    font-size: 16px;
+    border: 1px solid var(--small-text-color);
+    font-weight:bold ;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+}
+
+.landing .btn-group button:nth-child(2):hover{
+    border-color: white;
+}
+
+@media(max-width:550px)
+{
+    .landing .image{
+        display: none;
+    }
+}
+
+
+
+/* End Landing  */
+
+
+/* Start Product Section  */
+
+
+
+.product-section{
+    background-color: #eff2f1;
+}
+.product-section .container {
+    display: flex;
+    padding: 110px 0px;
+    flex-wrap: wrap;
+}
+
+.product-section .info{
+    width: 330px;
+    margin-bottom: 20px;
+}
+
+.product-section .info h2{
+    width: 300px;
+    font-size: 34px;
+    font-weight: 500;
+    color: #2f2f2f;
+    margin-bottom: 27px;
+}
+
+.product-section .info p {
+    color: var(--small-text-color);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.product-section .info button{
+    background-color: #2f2f2f;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 28px;
+    font-size: 15px;
+    border-radius: 26px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: .3s;
+}
+.product-section .info button:hover{
+    background-color: black;
+}
+
+
+.product-section .card .image{
+    transition: .3s;
+    z-index: 1000;
+
+}
+.product-section .card .image img{
+    width: 310px;
+}
+.product-section .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    padding-top:30px ;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+  
+.product-section .card::before {
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #dce5e4;
+bottom: -100%;
+left: 0;
+transition: .3s;
+z-index: 1;
+border-radius: 9px;
+
+}
+
+.product-section .card .product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    z-index: 2;
+}
+
+.product-section .card .product-info .title{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.product-section .card .product-info .price{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.product-section .card .add-icons{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #2f2f2f;
+    border-radius: 50%;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    bottom: 30px;
+    opacity:0 ;
+    font-weight: 300;
+    transition: .3s;
+}
+
+
+
+.product-section .card:hover::before{
+    height: 70%;
+
+    bottom: 0;
+}
+.product-section .card:hover .image{
+    transform: translateY(-30px);
+}
+
+.product-section .card:hover .add-icons{
+    bottom: 0;
+    opacity: 1;
+}
+/* End Product Section  */
+
+
+/* Start Choose us */
+.chooseus{
+    background-color: #eff2f1; 
+
+}
+
+.chooseus .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0px;
+    flex-wrap:wrap ;
+
+}
+
+.chooseus .container .image img{
+    width: 520px;
+    border-radius: 15px;
+}
+@media(max-width:600px)
+{
+    .chooseus .container .image img{
+        width: 340px;
+        margin-top: 30px;
+    }
+}
+
+.chooseus .container .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.chooseus .container .text{
+    width: 700px;
+}
+.chooseus .container .text .cards .card{
+    width: 300px;
+    margin: 40px 0px 5px 0px;
+    max-width: 100%;
+}
+
+@media(max-width:600px)
+{
+    .chooseus .container .text .cards .card{
+        width: 180px;
+    }
+}
+
+
+.chooseus .container .text .cards .card .image img{
+    width: 47px;
+}
+
+.chooseus .container .text .cards .card .image{
+    position: relative;
+    width: fit-content;
+}
+
+
+.chooseus .container .text .cards .card .image::before{
+    content: ''; 
+    position: absolute;
+    background-color: var(--small-text-color);
+    width: 35px;
+    height: 35px;
+    border-radius:50% ;
+    opacity: .3;
+    right: -4px;
+    bottom: 20%;
+    /* transform: translateX(-50%); */
+
+}
+
+.chooseus .container .text h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black-color);
+    margin-bottom: 17px;
+}
+.chooseus .container .text p.title {
+    color: var(--black-color);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+@media(width:600px)
+{
+    .chooseus .container .text p.title{
+        width: 130px;
+        margin-top:10px;
+    }
+}
+
+.chooseus .container .text p.des{
+    color: var(--small-text-color); 
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+@media(max-width:600px)
+{
+    .chooseus .container .text p.des{
+        width: 100px;
+    
+    }
+}
+
+.chooseus .container .text .title-section{
+    color: var(--small-text-color);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+@media(max-width:600px)
+{
+    .chooseus .container .text .title-section{
+        width: 355px;
+    }
+}
+
+/* End Choose us */
