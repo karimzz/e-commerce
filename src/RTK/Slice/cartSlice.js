@@ -31,7 +31,28 @@ const cartSlice = createSlice({
                 return element.id !== action.payload ;
             })
             state.products = tempProduct ; 
+        } , 
+
+        increaseProduct : (state , action)=>{
+            const itemIndex = state.products.findIndex((item)=>{
+                return item.id === action.payload; 
+            })
+            state.products[itemIndex].qun += 1 ; 
+        } ,
+
+        decreaseProduct : (state , action)=>{
+            const itemIndex = state.products.findIndex((item)=>{
+                return item.id === action.payload; 
+            })
+            if(state.products[itemIndex].qun  <2 )
+            {
+                state.products = state.products.filter((element)=>element.id !== state.products[itemIndex].id)
+            }else{
+                state.products[itemIndex].qun -=1 ; 
+            }
         }
+
+
     } , 
     
 })
@@ -39,6 +60,6 @@ const cartSlice = createSlice({
 
 export default cartSlice.reducer ; 
 
-export const {addToCart , removeProduct}   = cartSlice.actions ; 
+export const {addToCart , removeProduct , increaseProduct , decreaseProduct}   = cartSlice.actions ; 
 
 // export {addToCart } = cartSlice.actions ; 

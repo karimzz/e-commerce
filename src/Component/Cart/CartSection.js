@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector  , useDispatch} from 'react-redux';
-import { removeProduct } from '../../RTK/Slice/cartSlice';
+import { removeProduct , increaseProduct , decreaseProduct } from '../../RTK/Slice/cartSlice';
 
 const CartSection = () => {
 
@@ -14,6 +14,17 @@ const CartSection = () => {
     // For Remove Product From Cart
     const removeProductHandler = (id)=>{
         dispatch(removeProduct(id)) ; 
+    }
+
+    // For Decrease Product Form Cart
+    const decreaseProductHandler = (ID)=>{
+        dispatch(decreaseProduct(ID)) ; 
+    }
+
+
+    // For Increase Product 
+    const increaseProductHandler = (ID)=>{
+        dispatch(increaseProduct(ID)) ; 
     }
 
 
@@ -41,9 +52,9 @@ const CartSection = () => {
                             <h3 className ="product-name" >{item.title}</h3>
                             <p>$ {item.price}</p>
                             <div className='qun-container'>
-                                <span className='plus'> + </span>
+                                <span className='plus' onClick = {()=>increaseProductHandler(item.id)}> + </span>
                                 <span className='num-pro'>{item.qun}</span>
-                                <span className='minus'> - </span>
+                                <span className='minus' onClick = {()=>decreaseProductHandler(item.id)}> - </span>
                             </div>
                             <div className='pro-total'> $ {item.qun * item.price}</div>
                             <div className='remove-pro' onClick={()=>removeProductHandler(item.id)}>

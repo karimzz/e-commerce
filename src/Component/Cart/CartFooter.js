@@ -39,7 +39,7 @@ const CartFooter = () => {
                 </div>
                 <div className='total'>
                     <p>Total</p>
-                    <p className='total-price'>$ {subTotal == 0 ? 0  : subTotal + 400}</p>
+                    <p className='total-price'>$ {subTotal === 0 ? 0  : subTotal + 400}</p>
                 </div>
                 <button>Proceed To Checkout</button>
             </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import pic from "./../../image/product-2.png" ; 
 
 const SmallProductCard = ({name , img , des}) => {
   return (
