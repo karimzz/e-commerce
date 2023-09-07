@@ -52,7 +52,7 @@ const ChooseUs = () => {
                             </div>
                         </div>
                     </div>
-                <div className='image'>
+                <div className='image big-image'>
                     <img alt='pho' loading='lazy' src={whyChoosePic}  />
                 </div>
             </div>

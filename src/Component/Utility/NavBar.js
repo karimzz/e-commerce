@@ -1,11 +1,21 @@
 import React, { useState } from 'react'
 import "./utility.css";
+import { Link, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 
 
 const NavBar = () => {
+
+
+    const cartItem = useSelector(state=>state.cartSlice.products);
+
+    const numOfProducts = cartItem.reduce((acc , current)=> acc += current.qun, 0)
+    
+     
+
 
     const [showMenu , setShowMenu] = useState(false) ;
 
@@ -22,21 +32,21 @@ const NavBar = () => {
                 </div>
                 <div className='links'>
                     <ul className='meny'>
-                        <li><a className='active' href='/'>Home</a></li>
-                        <li><a href='/'>Shop</a></li>
-                        <li><a href='/'>About us</a></li>
-                        <li><a href='/'>Service</a></li>
-                        <li><a href='/'>Blog</a></li>
-                        <li><a href='/'>Contact us</a></li>
+                        <li><NavLink  to='/'>Home</NavLink></li>
+                        <li><NavLink to='/shop'>Shop</NavLink></li>
+                        <li><NavLink to='/aboutus'>About us</NavLink></li>
+                        <li><NavLink to='/services'>Service</NavLink></li>
+                        <li><NavLink to='/blog'>Blog</NavLink></li>
+                        <li><NavLink to='/contact'>Contact us</NavLink></li>
                     </ul>
                     <div className='account'>
-                        <a href='/'><span className="material-symbols-outlined">
+                        <NavLink href='/profile'><span className="material-symbols-outlined">
                         person
-                        </span></a>
+                        </span></NavLink>
 
-                        <a href='/cart' className='cart-bag'><div className='count-cart'>10</div> <span className="k-cart-icon material-symbols-outlined">
+                        <NavLink to='/cart' className='cart-bag'><div className='count-cart'>{numOfProducts}</div> <span className="k-cart-icon material-symbols-outlined">
                         shopping_cart
-                        </span></a>
+                        </span></NavLink>
                     </div>
                     
                 </div>
@@ -46,22 +56,24 @@ const NavBar = () => {
                         </span>
                     </div>
         </div>
+        
         {
             showMenu &&(
                 
                 <div className='hidden-menu'>
                     <ul>
                         <li><a className='active' href='/'>home</a></li>
-                        <li><a href='/'>Shop</a></li>
-                        <li><a href='/'>About us</a></li>
-                        <li><a href='/'>Service</a></li>
-                        <li><a href='/'>Blog</a></li>
-                        <li><a href='/'>Contact us</a></li>
+                        <li><NavLink to={"/shop"}>Shop</NavLink></li>
+                        <li><Link to={"/shop"} >About us</Link></li>
+                        <li><a href="/service">Service</a></li>
+                        <li><a href='/blog'>Blog</a></li>
+                        <li><a href='/contactus'>Contact us</a></li>
                     </ul>
                 </div>
                 
             )
         }
+        
     </nav>
   )
 }
