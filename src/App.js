@@ -5,6 +5,7 @@ import "./App.css"
 import HomePage from "./Page/Home/HomePage";
 import ShopPage from "./Page/Shop/ShopPage";
 import CartPage from "./Page/Cart/CartPage";
+import AboutPage from "./Page/Aboutus/AboutPage";
 
 
 
@@ -15,6 +16,7 @@ const App = ()=>{
                 <NavBar />
                 <Routes>
                     <Route path="/shop" element={<ShopPage />} />
+                    <Route path="/about" element={<AboutPage />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/cart" element={<CartPage />} />
                 </Routes>

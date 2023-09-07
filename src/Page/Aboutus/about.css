@@ -1,0 +1,63 @@
+/* Start Our Team */
+
+.our-team {
+    background-color: var(--second-background);
+}
+.our-team .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 0px;
+}
+
+.our-team .container .card{
+    width: 300px;
+
+}
+
+.our-team .container .card .image{
+    margin-bottom: 25px;
+}
+.our-team .container .card .image img{
+    width: 280px;
+    border-radius: 6px;
+}
+
+.our-team .container .card .info h2 a
+{
+    font-size: 30px;
+    color: black;
+    font-weight: 400; 
+    transition: .3s;
+}
+
+.our-team .container .card .info h2 a:hover{
+    text-decoration: none;
+}
+
+.our-team .container .card .info h2{
+    margin-bottom: 18px;
+}
+
+.our-team .container .card .info p.job-title{
+    color: var(--small-text-color);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.our-team .container .card .info p.des{
+    color: var(--small-text-color);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.our-team .container .card .info .learn {
+    color: black;
+    transition: .3s;
+}
+.our-team .container .card .info .learn:hover{
+    text-decoration: none;
+}
+
+/* End Our Team */
