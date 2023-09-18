@@ -32,19 +32,19 @@ const NavBar = () => {
                 </div>
                 <div className='links'>
                     <ul className='meny'>
-                        <li><NavLink  to='/'>Home</NavLink></li>
-                        <li><NavLink to='/shop'>Shop</NavLink></li>
-                        <li><NavLink to='/about'>About us</NavLink></li>
-                        <li><NavLink to='/services'>Service</NavLink></li>
-                        <li><NavLink to='/blog'>Blog</NavLink></li>
-                        <li><NavLink to='/contact'>Contact us</NavLink></li>
+                        <li><NavLink  to='/e-commerce'>Home</NavLink></li>
+                        <li><NavLink to='/e-commerce/shop'>Shop</NavLink></li>
+                        <li><NavLink to='/e-commerce/about'>About us</NavLink></li>
+                        <li><NavLink to='/e-commerce/services'>Service</NavLink></li>
+                        <li><NavLink to='/e-commerce/blog'>Blog</NavLink></li>
+                        <li><NavLink to='/e-commerce/contact'>Contact us</NavLink></li>
                     </ul>
                     <div className='account'>
                         <NavLink href='/profile'><span className="material-symbols-outlined">
                         person
                         </span></NavLink>
 
-                        <NavLink to='/cart' className='cart-bag'><div className='count-cart'>{numOfProducts}</div> <span className="k-cart-icon material-symbols-outlined">
+                        <NavLink to='/e-commerce/cart' className='cart-bag'><div className='count-cart'>{numOfProducts}</div> <span className="k-cart-icon material-symbols-outlined">
                         shopping_cart
                         </span></NavLink>
                     </div>

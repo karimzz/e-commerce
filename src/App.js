@@ -15,10 +15,11 @@ const App = ()=>{
             <BrowserRouter>
                 <NavBar />
                 <Routes>
-                    <Route path="/shop" element={<ShopPage />} />
-                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/e-commerce/shop" element={<ShopPage />} />
+                    <Route path="/e-commerce/about" element={<AboutPage />} />
+                    <Route path="/e-commerce/cart" element={<CartPage />} />
                     <Route path="/e-commerce" element={<HomePage />} />
-                    <Route path="/cart" element={<CartPage />} />
+
                 </Routes>
             </BrowserRouter>
         </div>
