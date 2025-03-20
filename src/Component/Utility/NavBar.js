@@ -32,7 +32,7 @@ const NavBar = () => {
                 </div>
                 <div className='links'>
                     <ul className='meny'>
-                        <li><NavLink  to='/e-commerce'>Home</NavLink></li>
+                        <li><NavLink end to='/e-commerce'>Home</NavLink></li>
                         <li><NavLink to='/e-commerce/shop'>Shop</NavLink></li>
                         <li><NavLink to='/e-commerce/about'>About us</NavLink></li>
                         <li><NavLink to='/e-commerce/services'>Service</NavLink></li>
